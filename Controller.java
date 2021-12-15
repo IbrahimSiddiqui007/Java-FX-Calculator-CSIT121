@@ -3,9 +3,6 @@ import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
-import javafx.scene.input.KeyCode;
-import javafx.scene.input.KeyEvent;
-
 import java.net.URL;
 import java.util.ResourceBundle;
 
@@ -219,7 +216,7 @@ public class Controller implements Initializable
         {
             int point = resultDisplay.getText().codePointCount(0, resultDisplay.getText().length());
 
-            if (resultDisplay.getText().contains("1") || resultDisplay.getText().contains("2") || resultDisplay.getText().contains("3") || resultDisplay.getText().contains("4") || resultDisplay.getText().contains("5") || resultDisplay.getText().contains("6") || resultDisplay.getText().contains("7") || resultDisplay.getText().contains("8") || resultDisplay.getText().contains("9") || resultDisplay.getText().contains("0") && point<1)
+            if (resultDisplay.getText().contains("1") || resultDisplay.getText().contains("2") || resultDisplay.getText().contains("3") || resultDisplay.getText().contains("4") || resultDisplay.getText().contains("5") || resultDisplay.getText().contains("6") || resultDisplay.getText().contains("7") || resultDisplay.getText().contains("8") || resultDisplay.getText().contains("9") || resultDisplay.getText().contains("0") )
             {
                 resultDisplay.setText(resultDisplay.getText()+".");
             }
@@ -264,8 +261,8 @@ public class Controller implements Initializable
             {
                 case "+" -> resultDisplay.setText(String.valueOf(num+numSecond));
                 case "-" -> resultDisplay.setText(String.valueOf(num-numSecond));
-                case "÷" -> resultDisplay.setText(String.valueOf(num*numSecond));
-                case "×" -> {
+                case "×" -> resultDisplay.setText(String.valueOf(num*numSecond));
+                case "÷" -> {
                     try
                     {
                         resultDisplay.setText(String.valueOf(num/numSecond));
@@ -285,8 +282,15 @@ public class Controller implements Initializable
 
 
     }
+
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
 
+    }
+
+    public void btnDelete(ActionEvent actionEvent) {
+    }
+
+    public void Exit(ActionEvent actionEvent) {
     }
 }
