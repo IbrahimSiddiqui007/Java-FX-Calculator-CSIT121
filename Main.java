@@ -19,10 +19,10 @@ public class Main extends Application
     {
         try
         {
-            Parent root = FXMLLoader.load(getClass().getResource("Calculator.fxml"));
+            Parent root = FXMLLoader.load(getClass().getResource("Login.fxml"));
             Scene scene = new Scene(root);
-            scene.setFill(Color.TRANSPARENT);
             stage.setScene(scene);
+            scene.setFill(Color.TRANSPARENT);
             stage.initStyle(StageStyle.TRANSPARENT);
             stage.setResizable(false);
             stage.show();
