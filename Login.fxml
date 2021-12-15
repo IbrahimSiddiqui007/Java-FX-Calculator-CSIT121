@@ -30,7 +30,7 @@
                   <Font name="Times New Roman" size="20.0" />
                </font>
             </Label>
-            <Label fx:id="Success" layoutX="153.0" layoutY="141.0" prefHeight="23.0" prefWidth="133.0" />
+            <Label fx:id="Success" layoutX="153.0" layoutY="141.0" prefHeight="23.0" prefWidth="346.0" />
          </children>
       </AnchorPane>
       <Label layoutX="23.0" layoutY="3.0" prefHeight="19.0" prefWidth="58.0" text="Login" textFill="WHITE">
