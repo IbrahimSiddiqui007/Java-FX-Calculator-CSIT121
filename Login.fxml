@@ -20,7 +20,10 @@
                   <Font name="Times New Roman" size="13.0" />
                </font>
             </TextField>
-            <TextField fx:id="PassField" layoutX="247.0" layoutY="94.0" onAction="#LoginCheck" promptText="Enter Password" />
+            <TextField fx:id="PassField" layoutX="244.0" layoutY="94.0" onAction="#LoginCheck" prefHeight="25.0" prefWidth="161.0" promptText="Enter Password">
+               <font>
+                  <Font name="Times New Roman" size="13.0" />
+               </font></TextField>
             <Button fx:id="LoginButton" layoutX="66.0" layoutY="129.0" mnemonicParsing="false" onAction="#LoginCheck" prefHeight="46.0" prefWidth="77.0" styleClass="BtnStyle" stylesheets="@CalcStyle.css" text="Login" />
             <Label layoutX="247.0" layoutY="64.0" text="Password">
                <font>
