@@ -29,37 +29,37 @@
                   <Font name="Times New Roman" size="13.0" />
                </font>
             </Button>
-            <Button fx:id="Sin" alignment="CENTER" contentDisplay="CENTER" layoutX="7.0" layoutY="194.0" mnemonicParsing="false" onAction="#btnAdvancedOperatorHandler" prefHeight="70.0" prefWidth="90.0" styleClass="BtnStyle" text="Sin" textFill="WHITE">
+            <Button fx:id="Sin" alignment="CENTER" contentDisplay="CENTER" layoutX="7.0" layoutY="194.0" mnemonicParsing="false" onAction="#btnOperatorHandler" prefHeight="70.0" prefWidth="90.0" styleClass="BtnStyle" text="Sin" textFill="WHITE">
                <font>
                   <Font name="Times New Roman" size="13.0" />
                </font>
             </Button>
-            <Button fx:id="Cos" alignment="CENTER" contentDisplay="CENTER" layoutX="112.0" layoutY="194.0" mnemonicParsing="false" onAction="#btnAdvancedOperatorHandler" prefHeight="70.0" prefWidth="90.0" styleClass="BtnStyle" text="Cos" textFill="WHITE">
+            <Button fx:id="Cos" alignment="CENTER" contentDisplay="CENTER" layoutX="112.0" layoutY="194.0" mnemonicParsing="false" onAction="#btnOperatorHandler" prefHeight="70.0" prefWidth="90.0" styleClass="BtnStyle" text="Cos" textFill="WHITE">
                <font>
                   <Font name="Times New Roman" size="13.0" />
                </font>
             </Button>
-            <Button fx:id="Tan" alignment="CENTER" contentDisplay="CENTER" layoutX="217.0" layoutY="194.0" mnemonicParsing="false" onAction="#btnAdvancedOperatorHandler" prefHeight="70.0" prefWidth="90.0" styleClass="BtnStyle" text="Tan" textFill="WHITE">
+            <Button fx:id="Tan" alignment="CENTER" contentDisplay="CENTER" layoutX="217.0" layoutY="194.0" mnemonicParsing="false" onAction="#btnOperatorHandler" prefHeight="70.0" prefWidth="90.0" styleClass="BtnStyle" text="Tan" textFill="WHITE">
                <font>
                   <Font name="Times New Roman" size="13.0" />
                </font>
             </Button>
-            <Button fx:id="Log" alignment="CENTER" contentDisplay="CENTER" layoutX="322.0" layoutY="194.0" mnemonicParsing="false" onAction="#btnAdvancedOperatorHandler" prefHeight="70.0" prefWidth="90.0" styleClass="BtnStyle" text="Log" textFill="WHITE">
+            <Button fx:id="Log" alignment="CENTER" contentDisplay="CENTER" layoutX="322.0" layoutY="194.0" mnemonicParsing="false" onAction="#btnOperatorHandler" prefHeight="70.0" prefWidth="90.0" styleClass="BtnStyle" text="Log" textFill="WHITE">
                <font>
                   <Font name="Times New Roman" size="13.0" />
                </font>
             </Button>
-            <Button fx:id="oneOverX" alignment="CENTER" contentDisplay="CENTER" layoutX="7.0" layoutY="269.0" mnemonicParsing="false" onAction="#btnAdvancedOperatorHandler" prefHeight="70.0" prefWidth="90.0" styleClass="BtnStyle" text="1/X" textFill="WHITE">
+            <Button fx:id="oneOverX" alignment="CENTER" contentDisplay="CENTER" layoutX="7.0" layoutY="269.0" mnemonicParsing="false" onAction="#btnOperatorHandler" prefHeight="70.0" prefWidth="90.0" styleClass="BtnStyle" text="1/X" textFill="WHITE">
                <font>
                   <Font name="Times New Roman" size="13.0" />
                </font>
             </Button>
-            <Button fx:id="sqrRoot" alignment="CENTER" contentDisplay="CENTER" layoutX="112.0" layoutY="269.0" mnemonicParsing="false" onAction="#btnAdvancedOperatorHandler" prefHeight="70.0" prefWidth="90.0" styleClass="BtnStyle" text="√" textFill="WHITE">
+            <Button fx:id="sqrRoot" alignment="CENTER" contentDisplay="CENTER" layoutX="112.0" layoutY="269.0" mnemonicParsing="false" onAction="#btnOperatorHandler" prefHeight="70.0" prefWidth="90.0" styleClass="BtnStyle" text="√" textFill="WHITE">
                <font>
                   <Font name="Times New Roman" size="13.0" />
                </font>
             </Button>
-            <Button fx:id="Pow" alignment="CENTER" contentDisplay="CENTER" layoutX="217.0" layoutY="269.0" mnemonicParsing="false" onAction="#btnAdvancedOperatorHandler" prefHeight="70.0" prefWidth="90.0" styleClass="BtnStyle" text="^" textFill="WHITE">
+            <Button fx:id="Pow" alignment="CENTER" contentDisplay="CENTER" layoutX="217.0" layoutY="269.0" mnemonicParsing="false" onAction="#btnOperatorHandler" prefHeight="70.0" prefWidth="90.0" styleClass="BtnStyle" text="^" textFill="WHITE">
                <font>
                   <Font name="Times New Roman" size="13.0" />
                </font>
