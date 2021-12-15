@@ -52,15 +52,20 @@ public class LoginController implements Initializable
             passWord = line.substring(delimIndx + 1, line.length());
 
 
-            if ((PassField.getText().equals(passWord) && UserField.getText().equals(userName))) {
+            if ((PassField.getText().equals(passWord) && UserField.getText().equals(userName)))
+            {
                 Stage calcStage = (Stage) LoginButton.getScene().getWindow();
                 Parent calcView = FXMLLoader.load(getClass().getResource("Calculator.fxml"));
                 Scene scene = new Scene(calcView);
                 scene.setFill(Color.TRANSPARENT);
                 calcStage.setScene(scene);
                 //calcStage.initStyle(StageStyle.TRANSPARENT);
-                calcStage.setResizable(false);
+                calcStage.setResizable(true);
                 calcStage.show();
+            }
+            else
+            {
+                Success.setText("Sorry incorrect Login Details");
             }
         }
     }
