@@ -24,7 +24,10 @@ public class Controller implements Initializable
     private Button Delete;
 
     @FXML
-    private Button Log;
+    private Button Log_Ten;
+
+    @FXML
+    private Button NLog;
 
     @FXML
     private Button Pow;
@@ -40,6 +43,15 @@ public class Controller implements Initializable
 
     @FXML
     private Button add;
+
+    @FXML
+    private Button arcCos;
+
+    @FXML
+    private Button arcSin;
+
+    @FXML
+    private Button arcTan;
 
     @FXML
     private Button decimalPoint;
@@ -297,11 +309,35 @@ public class Controller implements Initializable
             resultDisplay.setText("");
             operator = "Tan";
         }
-        else if (event.getSource() == Log)
+        else if (event.getSource() == arcSin)
         {
             num = Float.parseFloat(resultDisplay.getText());
             resultDisplay.setText("");
-            operator = "Log";
+            operator = "ArcSin";
+        }
+        else if (event.getSource() == arcCos)
+        {
+            num = Float.parseFloat(resultDisplay.getText());
+            resultDisplay.setText("");
+            operator = "ArcCos";
+        }
+        else if (event.getSource() == arcTan)
+        {
+            num = Float.parseFloat(resultDisplay.getText());
+            resultDisplay.setText("");
+            operator = "ArcTan";
+        }
+        else if (event.getSource() == NLog)
+        {
+            num = Float.parseFloat(resultDisplay.getText());
+            resultDisplay.setText("");
+            operator = "NLog";
+        }
+        else if (event.getSource() == Log_Ten)
+        {
+            num = Float.parseFloat(resultDisplay.getText());
+            resultDisplay.setText("");
+            operator = "Log10";
         }
         else if (event.getSource() == equals)
         {
@@ -325,7 +361,7 @@ public class Controller implements Initializable
                     }
                 }
             }
-            else if (operator.contains("1/X") || operator.contains("√") || operator.contains("^") || operator.contains("Sin") || operator.contains("Cos") || operator.contains("Tan") || operator.contains("Log"))
+            else if (operator.contains("1/X") || operator.contains("√") || operator.contains("^") || operator.contains("Sin") || operator.contains("Cos") || operator.contains("Tan") || operator.contains("NLog") || operator.contains("ArcSin") || operator.contains("ArcCos") || operator.contains("ArcTan") || operator.contains("Log10"))
             {
                 if (operator.contains("^"))
                 {
@@ -348,9 +384,13 @@ public class Controller implements Initializable
                         }
                         case "√" -> resultDisplay.setText(String.valueOf(Math.sqrt(num)));
                         case "Sin" -> resultDisplay.setText(String.valueOf(Math.sin(Math.toRadians(num))));
+                        case "ArcSin" -> resultDisplay.setText(String.valueOf(Math.asin(Math.toRadians(num))));
                         case "Cos" -> resultDisplay.setText(String.valueOf(Math.cos(Math.toRadians(num))));
+                        case "ArcCos" -> resultDisplay.setText(String.valueOf(Math.acos(Math.toRadians(num))));
                         case "Tan" -> resultDisplay.setText(String.valueOf(Math.tan(Math.toRadians(num))));
-                        case "Log" -> resultDisplay.setText(String.valueOf(Math.log(num)));
+                        case "ArcTan" -> resultDisplay.setText(String.valueOf(Math.atan(Math.toRadians(num))));
+                        case "NLog" -> resultDisplay.setText(String.valueOf(Math.log(num)));
+                        case "Log10" -> resultDisplay.setText(String.valueOf(Math.log10(num)));
                     }
                 }
             }
