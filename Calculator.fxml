@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="675.0" prefWidth="427.0" stylesheets="@CalcStyle.css" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller">
+   <children>
+      <Pane layoutX="4.0" layoutY="25.0" prefHeight="646.0" prefWidth="419.0" styleClass="MPane">
+         <children>
+            <Pane layoutX="6.0" layoutY="7.0" prefHeight="107.0" prefWidth="407.0" styleClass="Result">
+               <children>
+                  <Label fx:id="resultDisplay" alignment="CENTER_RIGHT" layoutY="37.0" prefHeight="34.0" prefWidth="400.0" text="0.0" textFill="WHITE">
+                     <font>
+                        <Font name="Times New Roman Bold" size="30.0" />
+                     </font>
+                  </Label>
+               </children>
+            </Pane>
+            <Button fx:id="Clear" alignment="CENTER" contentDisplay="CENTER" layoutX="7.0" layoutY="119.0" mnemonicParsing="false" prefHeight="70.0" prefWidth="90.0" styleClass="BtnStyle" text="C" textFill="WHITE">
+               <font>
+                  <Font name="Times New Roman" size="13.0" />
+               </font>
+            </Button>
+            <Button fx:id="Open_Bracket" alignment="CENTER" contentDisplay="CENTER" layoutX="112.0" layoutY="119.0" mnemonicParsing="false" prefHeight="70.0" prefWidth="90.0" styleClass="BtnStyle" text="(" textFill="WHITE">
+               <font>
+                  <Font name="Times New Roman" size="13.0" />
+               </font>
+            </Button>
+            <Button fx:id="Close_Bracket" alignment="CENTER" contentDisplay="CENTER" layoutX="217.0" layoutY="119.0" mnemonicParsing="false" prefHeight="70.0" prefWidth="90.0" styleClass="BtnStyle" text=")" textFill="WHITE">
+               <font>
+                  <Font name="Times New Roman" size="13.0" />
+               </font>
+            </Button>
+            <Button fx:id="Delete" alignment="CENTER" contentDisplay="CENTER" layoutX="322.0" layoutY="119.0" mnemonicParsing="false" prefHeight="70.0" prefWidth="90.0" styleClass="BtnStyle" text="DEL" textFill="WHITE">
+               <font>
+                  <Font name="Times New Roman" size="13.0" />
+               </font>
+            </Button>
+            <Button fx:id="Sin" alignment="CENTER" contentDisplay="CENTER" layoutX="7.0" layoutY="194.0" mnemonicParsing="false" prefHeight="70.0" prefWidth="90.0" styleClass="BtnStyle" text="Sin" textFill="WHITE">
+               <font>
+                  <Font name="Times New Roman" size="13.0" />
+               </font>
+            </Button>
+            <Button fx:id="Cos" alignment="CENTER" contentDisplay="CENTER" layoutX="112.0" layoutY="194.0" mnemonicParsing="false" prefHeight="70.0" prefWidth="90.0" styleClass="BtnStyle" text="Cos" textFill="WHITE">
+               <font>
+                  <Font name="Times New Roman" size="13.0" />
+               </font>
+            </Button>
+            <Button fx:id="Tan" alignment="CENTER" contentDisplay="CENTER" layoutX="217.0" layoutY="194.0" mnemonicParsing="false" prefHeight="70.0" prefWidth="90.0" styleClass="BtnStyle" text="Tan" textFill="WHITE">
+               <font>
+                  <Font name="Times New Roman" size="13.0" />
+               </font>
+            </Button>
+            <Button fx:id="Log" alignment="CENTER" contentDisplay="CENTER" layoutX="322.0" layoutY="194.0" mnemonicParsing="false" prefHeight="70.0" prefWidth="90.0" styleClass="BtnStyle" text="Log" textFill="WHITE">
+               <font>
+                  <Font name="Times New Roman" size="13.0" />
+               </font>
+            </Button>
+            <Button alignment="CENTER" contentDisplay="CENTER" layoutX="7.0" layoutY="269.0" mnemonicParsing="false" prefHeight="70.0" prefWidth="90.0" styleClass="BtnStyle" text="1/X" textFill="WHITE">
+               <font>
+                  <Font name="Times New Roman" size="13.0" />
+               </font>
+            </Button>
+            <Button alignment="CENTER" contentDisplay="CENTER" layoutX="112.0" layoutY="269.0" mnemonicParsing="false" prefHeight="70.0" prefWidth="90.0" styleClass="BtnStyle" text="√" textFill="WHITE">
+               <font>
+                  <Font name="Times New Roman" size="13.0" />
+               </font>
+            </Button>
+            <Button alignment="CENTER" contentDisplay="CENTER" layoutX="217.0" layoutY="269.0" mnemonicParsing="false" prefHeight="70.0" prefWidth="90.0" styleClass="BtnStyle" text="^" textFill="WHITE">
+               <font>
+                  <Font name="Times New Roman" size="13.0" />
+               </font>
+            </Button>
+            <Button alignment="CENTER" contentDisplay="CENTER" layoutX="322.0" layoutY="269.0" mnemonicParsing="false" prefHeight="70.0" prefWidth="90.0" styleClass="BtnStyle" text="÷" textFill="WHITE">
+               <font>
+                  <Font name="Times New Roman" size="13.0" />
+               </font>
+            </Button>
+            <Button fx:id="seven" alignment="CENTER" contentDisplay="CENTER" layoutX="7.0" layoutY="344.0" mnemonicParsing="false" onAction="#btnActionHandler" prefHeight="70.0" prefWidth="90.0" styleClass="BtnStyle" text="7" textFill="WHITE">
+               <font>
+                  <Font name="Times New Roman" size="13.0" />
+               </font>
+            </Button>
+            <Button fx:id="eight" alignment="CENTER" contentDisplay="CENTER" layoutX="112.0" layoutY="344.0" mnemonicParsing="false" onAction="#btnActionHandler" prefHeight="70.0" prefWidth="90.0" styleClass="BtnStyle" text="8" textFill="WHITE">
+               <font>
+                  <Font name="Times New Roman" size="13.0" />
+               </font>
+            </Button>
+            <Button fx:id="nine" alignment="CENTER" contentDisplay="CENTER" layoutX="217.0" layoutY="344.0" mnemonicParsing="false" onAction="#btnActionHandler" prefHeight="70.0" prefWidth="90.0" styleClass="BtnStyle" text="9" textFill="WHITE">
+               <font>
+                  <Font name="Times New Roman" size="13.0" />
+               </font>
+            </Button>
+            <Button alignment="CENTER" contentDisplay="CENTER" layoutX="322.0" layoutY="344.0" mnemonicParsing="false" prefHeight="70.0" prefWidth="90.0" styleClass="BtnStyle" text="×" textFill="WHITE">
+               <font>
+                  <Font name="Times New Roman" size="13.0" />
+               </font>
+            </Button>
+            <Button fx:id="four" alignment="CENTER" contentDisplay="CENTER" layoutX="7.0" layoutY="419.0" mnemonicParsing="false" onAction="#btnActionHandler" prefHeight="70.0" prefWidth="90.0" styleClass="BtnStyle" text="4" textFill="WHITE">
+               <font>
+                  <Font name="Times New Roman" size="13.0" />
+               </font>
+            </Button>
+            <Button fx:id="five" alignment="CENTER" contentDisplay="CENTER" layoutX="112.0" layoutY="419.0" mnemonicParsing="false" onAction="#btnActionHandler" prefHeight="70.0" prefWidth="90.0" styleClass="BtnStyle" text="5" textFill="WHITE">
+               <font>
+                  <Font name="Times New Roman" size="13.0" />
+               </font>
+            </Button>
+            <Button fx:id="six" alignment="CENTER" contentDisplay="CENTER" layoutX="217.0" layoutY="419.0" mnemonicParsing="false" onAction="#btnActionHandler" prefHeight="70.0" prefWidth="90.0" styleClass="BtnStyle" text="6" textFill="WHITE">
+               <font>
+                  <Font name="Times New Roman" size="13.0" />
+               </font>
+            </Button>
+            <Button alignment="CENTER" contentDisplay="CENTER" layoutX="322.0" layoutY="419.0" mnemonicParsing="false" prefHeight="70.0" prefWidth="90.0" styleClass="BtnStyle" text="-" textFill="WHITE">
+               <font>
+                  <Font name="Times New Roman" size="13.0" />
+               </font>
+            </Button>
+            <Button fx:id="one" alignment="CENTER" contentDisplay="CENTER" layoutX="7.0" layoutY="494.0" mnemonicParsing="false" onAction="#btnActionHandler" prefHeight="70.0" prefWidth="90.0" styleClass="BtnStyle" text="1" textFill="WHITE">
+               <font>
+                  <Font name="Times New Roman" size="13.0" />
+               </font>
+            </Button>
+            <Button fx:id="two" alignment="CENTER" contentDisplay="CENTER" layoutX="112.0" layoutY="494.0" mnemonicParsing="false" onAction="#btnActionHandler" prefHeight="70.0" prefWidth="90.0" styleClass="BtnStyle" text="2" textFill="WHITE">
+               <font>
+                  <Font name="Times New Roman" size="13.0" />
+               </font>
+            </Button>
+            <Button fx:id="three" alignment="CENTER" contentDisplay="CENTER" layoutX="217.0" layoutY="494.0" mnemonicParsing="false" onAction="#btnActionHandler" prefHeight="70.0" prefWidth="90.0" styleClass="BtnStyle" text="3" textFill="WHITE">
+               <font>
+                  <Font name="Times New Roman" size="13.0" />
+               </font>
+            </Button>
+            <Button alignment="CENTER" contentDisplay="CENTER" layoutX="322.0" layoutY="494.0" mnemonicParsing="false" prefHeight="70.0" prefWidth="90.0" styleClass="BtnStyle" text="+" textFill="WHITE">
+               <font>
+                  <Font name="Times New Roman" size="13.0" />
+               </font>
+            </Button>
+            <Button alignment="CENTER" contentDisplay="CENTER" layoutX="7.0" layoutY="569.0" mnemonicParsing="false" onAction="#btnActionHandler" prefHeight="70.0" prefWidth="195.0" styleClass="BtnStyle" text="0" textFill="WHITE">
+               <font>
+                  <Font name="Times New Roman" size="13.0" />
+               </font>
+            </Button>
+            <Button alignment="CENTER" contentDisplay="CENTER" layoutX="217.0" layoutY="569.0" mnemonicParsing="false" prefHeight="70.0" prefWidth="90.0" styleClass="BtnStyle" text="X/X" textFill="WHITE">
+               <font>
+                  <Font name="Times New Roman" size="13.0" />
+               </font>
+            </Button>
+            <Button alignment="CENTER" contentDisplay="CENTER" layoutX="322.0" layoutY="569.0" mnemonicParsing="false" prefHeight="70.0" prefWidth="90.0" styleClass="BtnStyle" text="=" textFill="WHITE">
+               <font>
+                  <Font name="Times New Roman" size="13.0" />
+               </font>
+            </Button>
+         </children>
+      </Pane>
+      <Label layoutX="14.0" layoutY="5.0" prefHeight="21.0" prefWidth="76.0" text="Calculator" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

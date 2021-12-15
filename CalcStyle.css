@@ -1,0 +1,21 @@
+.root
+{
+    -fx-background-color: #000000;
+    -fx-background-radius: 25;
+}
+.MPane
+{
+    -fx-background-color: linear-gradient(to top left, #e74748, #9198e5 );
+    -fx-background-radius: 15 15 25 25;
+}
+.Result
+ {
+     -fx-background-color: #00000040;
+     -fx-background-radius: 15;
+ }
+
+.BtnStyle
+{
+    -fx-background-color: #00000040;
+    -fx-background-radius: 15;
+}
