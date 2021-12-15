@@ -1,3 +1,4 @@
+import javafx.application.Platform;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
@@ -17,9 +18,6 @@ public class Controller implements Initializable
     private Button Clear;
 
     @FXML
-    private Button Close_Bracket;
-
-    @FXML
     private Button Cos;
 
     @FXML
@@ -29,7 +27,7 @@ public class Controller implements Initializable
     private Button Log;
 
     @FXML
-    private Button Open_Bracket;
+    private Button Pow;
 
     @FXML
     private Button Sin;
@@ -38,19 +36,25 @@ public class Controller implements Initializable
     private Button Tan;
 
     @FXML
+    private Button Zero;
+
+    @FXML
     private Button add;
 
     @FXML
-    private Button multiply;
+    private Button decimalPoint;
 
     @FXML
     private Button div;
 
     @FXML
-    private Button subtract;
+    private Button eight;
 
     @FXML
-    private Button eight;
+    private Button equals;
+
+    @FXML
+    private Button exit;
 
     @FXML
     private Button five;
@@ -59,10 +63,16 @@ public class Controller implements Initializable
     private Button four;
 
     @FXML
+    private Button multiply;
+
+    @FXML
     private Button nine;
 
     @FXML
     private Button one;
+
+    @FXML
+    private Button oneOverX;
 
     @FXML
     private Label resultDisplay;
@@ -74,19 +84,16 @@ public class Controller implements Initializable
     private Button six;
 
     @FXML
+    private Button sqrRoot;
+
+    @FXML
+    private Button subtract;
+
+    @FXML
     private Button three;
 
     @FXML
     private Button two;
-
-    @FXML
-    private Button Zero;
-
-    @FXML
-    private Button equals;
-
-    @FXML
-    private Button decimalPoint;
 
     @FXML
     void btnActionHandler(ActionEvent event)
@@ -254,33 +261,107 @@ public class Controller implements Initializable
             resultDisplay.setText("");
             operator = "×";
         }
+        else if (event.getSource() == oneOverX)
+        {
+            num = Float.parseFloat(resultDisplay.getText());
+            resultDisplay.setText("");
+            operator = "1/X";
+        }
+        else if (event.getSource() == sqrRoot)
+        {
+            num = Float.parseFloat(resultDisplay.getText());
+            resultDisplay.setText("");
+            operator = "√";
+        }
+        else if (event.getSource() == Pow)
+        {
+            num = Float.parseFloat(resultDisplay.getText());
+            resultDisplay.setText("");
+            operator = "^";
+        }
+        else if (event.getSource() == Sin)
+        {
+            num = Float.parseFloat(resultDisplay.getText());
+            resultDisplay.setText("");
+            operator = "Sin";
+        }
+        else if (event.getSource() == Cos)
+        {
+            num = Float.parseFloat(resultDisplay.getText());
+            resultDisplay.setText("");
+            operator = "Cos";
+        }
+        else if (event.getSource() == Tan)
+        {
+            num = Float.parseFloat(resultDisplay.getText());
+            resultDisplay.setText("");
+            operator = "Tan";
+        }
+        else if (event.getSource() == Log)
+        {
+            num = Float.parseFloat(resultDisplay.getText());
+            resultDisplay.setText("");
+            operator = "Log";
+        }
         else if (event.getSource() == equals)
         {
-            numSecond = Float.parseFloat(resultDisplay.getText());
-            switch (operator)
+            if (operator.contains("+") || operator.contains("-") || operator.contains("×") || operator.contains("÷"))
             {
-                case "+" -> resultDisplay.setText(String.valueOf(num+numSecond));
-                case "-" -> resultDisplay.setText(String.valueOf(num-numSecond));
-                case "×" -> resultDisplay.setText(String.valueOf(num*numSecond));
-                case "÷" -> {
-                    try
-                    {
-                        resultDisplay.setText(String.valueOf(num/numSecond));
+                numSecond = Float.parseFloat(resultDisplay.getText());
+                switch (operator)
+                {
+                    case "+" -> resultDisplay.setText(String.valueOf(num+numSecond));
+                    case "-" -> resultDisplay.setText(String.valueOf(num-numSecond));
+                    case "×" -> resultDisplay.setText(String.valueOf(num*numSecond));
+                    case "÷" -> {
+                        try
+                        {
+                            resultDisplay.setText(String.valueOf(num/numSecond));
+                        }
+                        catch (ArithmeticException ae)
+                        {
+                            resultDisplay.setText("Error");
+                        }
                     }
-                    catch (ArithmeticException ae)
+                }
+            }
+            else if (operator.contains("1/X") || operator.contains("√") || operator.contains("^") || operator.contains("Sin") || operator.contains("Cos") || operator.contains("Tan") || operator.contains("Log"))
+            {
+                if (operator.contains("^"))
+                {
+                    numSecond = Float.parseFloat(resultDisplay.getText());
+                    resultDisplay.setText(String.valueOf(Math.pow(num,numSecond)));
+                }
+                else
+                {
+                    switch (operator)
                     {
-                        resultDisplay.setText("Error");
+                        case "1/X" -> {
+                            try
+                            {
+                                resultDisplay.setText(String.valueOf(1 / num));
+                            }
+                            catch (ArithmeticException ae)
+                            {
+                                resultDisplay.setText("ERR");
+                            }
+                        }
+                        case "√" -> resultDisplay.setText(String.valueOf(Math.sqrt(num)));
+                        case "Sin" -> resultDisplay.setText(String.valueOf(Math.sin(Math.toRadians(num))));
+                        case "Cos" -> resultDisplay.setText(String.valueOf(Math.cos(Math.toRadians(num))));
+                        case "Tan" -> resultDisplay.setText(String.valueOf(Math.tan(Math.toRadians(num))));
+                        case "Log" -> resultDisplay.setText(String.valueOf(Math.log(num)));
                     }
                 }
             }
         }
     }
+    public void btnDelete(ActionEvent actionEvent) {
+    }
 
-    @FXML
-    void btnAdvancedOperatorHandler(ActionEvent event)
+    public void Exit(ActionEvent actionEvent)
     {
-
-
+        Platform.exit();
     }
 
     @Override
@@ -288,9 +369,4 @@ public class Controller implements Initializable
 
     }
 
-    public void btnDelete(ActionEvent actionEvent) {
-    }
-
-    public void Exit(ActionEvent actionEvent) {
-    }
 }
