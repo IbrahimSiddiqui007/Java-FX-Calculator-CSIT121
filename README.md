@@ -1,8 +1,8 @@
 # Java FX Calculator
 
 ## Table of Contents
-1.[What was asked of us ?\n](#Intro)
-2.[The Calculator](#Product)\n
+[What was asked of us ?](#Intro)
+[The Calculator](#Product)
   1.[The Plan](#Plan)
   2.[The Look](#Look)
   
